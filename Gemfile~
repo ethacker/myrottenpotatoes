@@ -29,6 +29,16 @@ group :development, :test do
   gem 'debugger'
 end
 
+#making your Gemfile safe for Heroku
+ruby '1.9.3'
+group :development, :test do
+gem 'sqlite3'
+end
+group :production do
+gem 'pg'
+gem 'rails_12factor' 
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
